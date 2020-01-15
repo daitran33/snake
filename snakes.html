@@ -9,6 +9,46 @@
   <body>
 
     <div id="score">0</div>
+    <div id="instructions">  
+		<h2>Instructions</h2>
+		<ul>
+		<li>In the game of Snake, the player uses the arrow keys to move a "snake" around the board.</li>
+		<li>As the snake finds food, it eats the food, and thereby grows larger.</li>
+		<li>The game ends when the snake either moves off the screen or moves into itself.</li>
+		<li>The goal is to make the snake as large as possible before that happens.</li>
+		</ul>
+	
+	</div>
+	<script>
+     //capture the name of the player and store his name - Prompt for name
+     var name = '';
+	function captureName() {
+	while (name == '' || name == null) {
+	  name = prompt('What is your name? ');
+	}
+	
+		alert('Welcome! ' + name + ', Click ok to start the game');
+		var greeting = document.getElementById('greet');
+		greeting.innerHTML = 'Player: ' + name;
+    
+  }
+  window.onload = captureName();
+ 
+  </script>
+	  <table id="scoreboard">
+	<th id="title">Scoreboard</th>
+	<tr>
+  <tr><th id="rank">Ranking</th><th id="name">Player Name</th><th>Move Count</th><th>Date</th></tr>
+	<td>1st</td><td id="1st"></td><td id="score1st"></td><td id="dateOne"></td>
+  </tr>
+  <tr>
+	<td>2nd</td><td id="2nd"></td><td id="score2nd"></td><td id="dateTwo"></td>
+  </tr>
+  <tr>
+	<td>3rd</td><td id="3rd"></td><td id="score3rd"></td><td id="dateThree"></td>
+  </tr>
+	</table>
+   
     <canvas id="gameCanvas" width="300" height="300"></canvas>
 
     <style>
