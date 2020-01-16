@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+  </head>
+
+  <body>
+<!--      <script src="getName.js"></script>-->
+<div id="gameContainer">
+    <div id="score">0</div>
+     <div id="instructions">  
+		<h2>Instructions</h2>
+		<ul>
+		<li>In the game of Snake, the player uses the arrow keys to move a "snake" around the board.</li>
+		<li>As the snake finds food, it eats the food, and thereby grows larger.</li>
+		<li>The game ends when the snake either moves off the screen or moves into itself.</li>
+		<li>The goal is to make the snake as large as possible before that happens.</li>
+		</ul>
+	
+	</div>
+    <canvas id="gameCanvas" width="400" height="350"></canvas>
+<script src="script.js"></script>
+    <div id="controller">
+		<div class="left-control">
+			<button type="button" id="start" onclick="Draw();">Start Game</button><br><br>
+			<button type="button" id="save" onclick="saveGame();alert('Your game has been saved.');">Save Game</button>
+			<button type="button" id="resume" onclick="loadGame();">Resume Game</button><br><br>
+			<button type="button" id="leaderboard" onclick="displayHighscores()">Leaderboard</button>
+		</div>
+</div>
+  </body>
+  </html>
