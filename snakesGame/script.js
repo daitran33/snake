@@ -25,15 +25,18 @@
     let dx = 10;
     // Vertical velocity
     let dy = 0;
+
+ 
+
     // Get the canvas element
-     gameCanvas = document.getElementById("gameCanvas");
+    var gameCanvas = document.getElementById("gameCanvas");
     // Return a two dimensional drawing context
-     ctx = gameCanvas.getContext("2d");
-    // Start game
-   window.onload = showInst;
-    main();
+    var ctx = gameCanvas.getContext("2d");
+   // Start game
+   window.onload = showInst();
+   // main();
     // Create the first food location
-    createFood();
+    //createFood();
     // Call changeDirection whenever a key is pressed
     document.addEventListener("keydown", changeDirection);
     /**
@@ -79,15 +82,16 @@
 //Shows the game instructions to the user
 		function showInst() {
 		    userName = prompt("Enter your user name: ");
-			var canvas = document.getElementById('gameCanvas');
-			var cxt = canvas.getContext('2d');
-			cxt.font = "40px serif";
-			cxt.fillText("Instructions",140,140);
-			cxt.font = "25px serif";
-			cxt.fillStyle = "black";
-			cxt.fillText("Use the arrow buttons to move the tail to the target.",15,180);
-			cxt.fillText("Push PIN when the tail is over the target.",15,210);
-			cxt.fillText("Score is based on how many clicks it takes you to pin the tail on the donkey.",15,240);
+			//var canvas = document.getElementById('gameCanvas');
+			//var cxt = canvas.getContext('2d');
+			ctx.font = "40px serif";
+			ctx.fillText("Instructions",140,140);
+			ctx.font = "25px serif";
+			ctx.fillStyle = "black";
+			ctx.fillText("In the game of Snake, the player uses the arrow keys to move a "snake" around the board.",15,180);
+			ctx.fillText("As the snake finds food, it eats the food, and thereby grows larger.",15,210);
+			ctx.fillText("The game ends when the snake either moves off the screen or moves into itself.",15,240);
+            ctx.fillText("The goal is to make the snake as large as possible before that happens.",15,270);
 		}
 
 /**
