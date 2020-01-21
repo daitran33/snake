@@ -25,14 +25,11 @@
     let dx = 10;
     // Vertical velocity
     let dy = 0;
-
- 
-
     // Get the canvas element
     var gameCanvas = document.getElementById("gameCanvas");
     // Return a two dimensional drawing context
     var ctx = gameCanvas.getContext("2d");
-   // Start game
+    // Start game
    window.onload = showInst();
    // main();
     // Create the first food location
@@ -82,16 +79,16 @@
 //Shows the game instructions to the user
 		function showInst() {
 		    userName = prompt("Enter your user name: ");
-			//var canvas = document.getElementById('gameCanvas');
-			//var cxt = canvas.getContext('2d');
+			//var gamecanvas = document.getElementById('gameCanvas');
+			//var ctx = canvas.getContext('2d');
 			ctx.font = "40px serif";
 			ctx.fillText("Instructions",140,140);
 			ctx.font = "25px serif";
 			ctx.fillStyle = "black";
-			ctx.fillText("In the game of Snake, the player uses the arrow keys to move a "snake" around the board.",15,180);
+			ctx.fillText("In the game of Snake, the player uses the arrow keys to move a snake around the board.",15,180);
 			ctx.fillText("As the snake finds food, it eats the food, and thereby grows larger.",15,210);
 			ctx.fillText("The game ends when the snake either moves off the screen or moves into itself.",15,240);
-            ctx.fillText("The goal is to make the snake as large as possible before that happens.",15,270);
+      ctx.fillText("The goal is to make the snake as large as possible before that happens.",15,270);
 		}
 
 /**
