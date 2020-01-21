@@ -36,7 +36,7 @@
    window.onload = showInst();
    // main();
     // Create the first food location
-    //createFood();
+    createFood();
     // Call changeDirection whenever a key is pressed
     document.addEventListener("keydown", changeDirection);
     /**
