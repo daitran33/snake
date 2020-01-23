@@ -251,9 +251,10 @@
      document.getElementById('User').innerHTML= myUserObj.Name;
       //ystart = myUserObj.ycoordinate;
     //  xstart = myUserObj.xcoordinate;
-      document.getElementById('score').innerHTML= myUserObj.userScore;
-      date = myUserObj.Date;
+      document.getElementById('Score').innerHTML= myUserObj.userScore;
+     document.getElementById('Date').innerHTML = myUserObj.Date;
       main();
+        createFood();
     }else{
       alert("Sorry the User Name entered was not found");
     }

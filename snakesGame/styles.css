@@ -14,6 +14,12 @@
     
     
 }
+#Score, #User, #Date {
+    
+    width:32%;
+    margin:auto;
+    height:auto;
+}
 #controller {
 		padding: 25px 10px;
 		  width:550px;
