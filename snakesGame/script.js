@@ -241,20 +241,20 @@
 			}
 		}
 	//Searches local storage for a username.  restores the gameboard if the username exists
-		function loadGame()
-		{	
-			userName = prompt("Enter your user name: ");
-			var gameInfo = localStorage.getItem(userName);
-			myUserObj =JSON.parse(gameInfo);
-			if(gameInfo!= null ){
-				highscore = myUserObj.userScore;
-				//ystart = myUserObj.ycoordinate;
-				//xstart = myUserObj.xcoordinate;
-				highscore = myUserObj.userScore;
-				date = myUserObj.Date;
-                
-			}else{
-				alert("Sorry the User Name entered was not found");
-			}
-           
-		}
+  function loadGame()
+  {
+    userName = prompt("Enter your user name: ");
+    var gameInfo = localStorage.getItem(userName);
+    myUserObj =JSON.parse(gameInfo);
+    
+    if(gameInfo!= null ){
+     document.getElementById('User').innerHTML= myUserObj.Name;
+      //ystart = myUserObj.ycoordinate;
+    //  xstart = myUserObj.xcoordinate;
+      document.getElementById('score').innerHTML= myUserObj.userScore;
+      date = myUserObj.Date;
+      main();
+    }else{
+      alert("Sorry the User Name entered was not found");
+    }
+  }
