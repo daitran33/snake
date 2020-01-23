@@ -240,3 +240,21 @@
 			  alert("Sorry! This browser does not support web storage");
 			}
 		}
+	//Searches local storage for a username.  restores the gameboard if the username exists
+		function loadGame()
+		{	
+			userName = prompt("Enter your user name: ");
+			var gameInfo = localStorage.getItem(userName);
+			myUserObj =JSON.parse(gameInfo);
+			if(gameInfo!= null ){
+				highscore = myUserObj.userScore;
+				//ystart = myUserObj.ycoordinate;
+				//xstart = myUserObj.xcoordinate;
+				highscore = myUserObj.userScore;
+				date = myUserObj.Date;
+                
+			}else{
+				alert("Sorry the User Name entered was not found");
+			}
+           
+		}

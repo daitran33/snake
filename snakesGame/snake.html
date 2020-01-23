@@ -11,6 +11,11 @@
   <body>
 <!--      <script src="getName.js"></script>-->
 <div id="gameContainer">
+    <div class="heading">
+		<h1 class="title">snake<h1>
+		<h2>Your High Score: <span id="highscore"></span></h2>
+		<h2 class="uname">User Name: <span id="User"></span></h2>
+	</div>
     <div id="score">0</div>
 <!--
      <div id="instructions">  
@@ -28,7 +33,7 @@
 <script src="script.js"></script>
     <div id="controller">
 		<div class="left-control">
-			<button type="button" id="start" onclick="main();  createFood();">Start Game</button><br><br>
+			<button type="button" id="start" onclick="main();  createFood(); ">Start Game</button><br><br>
 			<button type="button" id="save" onclick="saveGame();alert('Your game has been saved.');">Save Game</button>
 			<button type="button" id="resume" onclick="loadGame();">Resume Game</button><br><br>
 			<button type="button" id="leaderboard" onclick="displayHighscores()">Leaderboard</button>
