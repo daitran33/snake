@@ -216,3 +216,27 @@
         dy = 10;
       }
     }
+//Saves current gamestate in local storage
+		function saveGame()
+		{
+			var date = new Date();
+			date = date.toUTCString();
+			var userInfo = {
+				Name:userName,
+				userScore:score,
+				Date:date
+			}
+		  //declare variables for JSON object 
+			var myJSON;
+		  // checks to see if browser supports localStorage
+			if (typeof(Storage) !== "undefined") {
+			// convert myUserObj to JSON and store it as key/value pair
+			myJSON = JSON.stringify(userInfo);
+			//use the property UserName of myUserObj as key for storage so that a user can be queried
+			localStorage.setItem(userInfo.Name, myJSON);
+			
+		  }
+		  else {
+			  alert("Sorry! This browser does not support web storage");
+			}
+		}
