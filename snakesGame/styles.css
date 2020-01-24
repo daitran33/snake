@@ -1,10 +1,21 @@
 
-  #myCanvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: left;
-  }
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	
+}/*resets*/
+  
+#gameCanvas {
+    	/*style the canvas*/
+	/*border: 1px solid #000000;*/
+	background-color: black;
+	background-position: center center;
+	background-size: contain;
+}
   #score {
     text-align: center;
     font-size: 100px;
@@ -14,11 +25,22 @@
     
     
 }
-#Score, #User, #Date {
+ .uname{
+ border: 1px solid red;
+    margin-right: 50px;
+    float:left;/*Add float left*/
+ width:100px
+
+}
+.uscore{
+     border: 1px solid red;
+    margin-left:50px;
+   
+  
+
+    width: 100px;
+    float: left;
     
-    width:32%;
-    margin:auto;
-    height:auto;
 }
 #controller {
 		padding: 25px 10px;
