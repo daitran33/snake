@@ -12,7 +12,7 @@
 #gameCanvas {
     	/*style the canvas*/
 	/*border: 1px solid #000000;*/
-	background-color: black;
+	
 	background-position: center center;
 	background-size: contain;
 }
@@ -26,14 +26,14 @@
     
 }
  .uname{
- border: 1px solid red;
+
     margin-right: 50px;
     float:left;/*Add float left*/
  width:100px
 
 }
 .uscore{
-     border: 1px solid red;
+     
     margin-left:50px;
    
   
