@@ -12,6 +12,7 @@
 #gameCanvas {
     	/*style the canvas*/
 	/*border: 1px solid #000000;*/
+    
 	
 	background-position: center center;
 	background-size: contain;
@@ -26,19 +27,19 @@
     
 }
  .uname{
-
-    margin-right: 50px;
+padding: 10px 10px;
+/*    margin-right: 100px;*/
     float:left;/*Add float left*/
- width:100px
+ width:200px;
 
 }
 .uscore{
-     
+     padding: 10px 10px;
     margin-left:50px;
    
   
 
-    width: 100px;
+    width: 200px;
     float: left;
     
 }
@@ -56,7 +57,7 @@
 		color: white;
 		padding: 7px 10px;
 		border: none;
-		border-radius: 15px;
+		border-radius: 30px;
 		transition: 2s;
 	  }
 	  button:hover {
@@ -69,7 +70,7 @@
 font-family: Arial;
 	  }
 	
-      canvas {
+      Canvas {
 		background: -webkit-linear-gradient(white, #33ccff, green); /* For Safari 5.1 to 6.0 */
 		background: -o-linear-gradient(white, #33ccff, green); /* For Opera 11.1 to 12.0 */
 		background: -moz-linear-gradient(white, #33ccff, green); /* For Firefox 3.6 to 15 */
@@ -78,8 +79,8 @@ font-family: Arial;
 	  .left-control {
 		text-align:center;
 		width:120px;
-		float: center;
-		display:inline-block;
+		float: left;
+/*		display:inline-block;*/
 	  } 
 	 
 	  
