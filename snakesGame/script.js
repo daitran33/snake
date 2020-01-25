@@ -262,6 +262,7 @@
 function displayHighscores(){
       //used for JSON object returned from local storage
       var myJSONhighscoreObject;
+//highscores();
       //read in top scores values from local storage and parse them to ints
       myJSONhighscoreObject = localStorage.getItem('highScore3');
       highScore3 = JSON.parse(myJSONhighscoreObject);
@@ -297,7 +298,7 @@ function displayHighscores(){
   function highscores(){
     var date = new Date();
     date = date.toUTCString();
-    saveGame();
+    //saveGame();
     if(!localStorage.highScore1){
     var highScore1 = {
     name : userName,
