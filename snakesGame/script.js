@@ -259,3 +259,129 @@
       alert("Sorry the User Name entered was not found");
     }
   }
+function displayHighscores(){
+      //used for JSON object returned from local storage
+      var myJSONhighscoreObject;
+      //read in top scores values from local storage and parse them to ints
+      myJSONhighscoreObject = localStorage.getItem('highScore3');
+      highScore3 = JSON.parse(myJSONhighscoreObject);
+
+  myJSONhighscoreObject = localStorage.getItem('highScore2');
+      highScore2 = JSON.parse(myJSONhighscoreObject);
+
+  myJSONhighscoreObject = localStorage.getItem('highScore1');
+      highScore1 = JSON.parse(myJSONhighscoreObject);
+
+      var canvas = document.getElementById('gameCanvas');
+      var context = canvas.getContext('2d');
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.font = "30px serif";
+
+  context.fillText("User Name", 15, 65);
+  context.fillText("Score", 255, 65);
+  context.fillText("Date", 555, 65);
+
+  context.fillText(highScore1.name,15,115);
+      context.fillText(highScore2.name,15,165);
+  context.fillText(highScore3.name,15,215);
+
+      context.fillText(JSON.stringify(highScore1.score),255,115);
+      context.fillText(JSON.stringify(highScore2.score),255,165);
+  context.fillText(JSON.stringify(highScore3.score),255,215);
+
+  context.fillText(highScore1.Date,455,115);
+      context.fillText(highScore2.Date,455,165);
+  context.fillText(highScore3.Date,455,215);
+
+    }
+  function highscores(){
+    var date = new Date();
+    date = date.toUTCString();
+    saveGame();
+    if(!localStorage.highScore1){
+    var highScore1 = {
+    name : userName,
+    score : 0,
+    Date : date
+    };
+    var highScore2 = {
+    name :" ",
+    score : 0,
+    Date : " "
+    };
+    var highScore3 = {
+    name :" ",
+    score : 0,
+    Date : " "
+    };
+
+    var newScore = score;
+    highScore1.score = newScore;
+     // convert myUserObj to JSON and store it as key/value pair
+     myJSONhighscoreObject = JSON.stringify(highScore1);
+     localStorage.setItem('highScore1', myJSONhighscoreObject);
+     myJSONhighscoreObject = JSON.stringify(highScore2);
+     localStorage.setItem('highScore2', myJSONhighscoreObject);
+     myJSONhighscoreObject = JSON.stringify(highScore3);
+     localStorage.setItem('highScore3', myJSONhighscoreObject);
+
+    } else {
+    var date = new Date();
+    date = date.toUTCString();
+    var newScore = score;
+    //read in top scores values from local storage and parse them to ints
+    myJSONhighscoreObject = localStorage.getItem('highScore1');
+    highScore1= JSON.parse(myJSONhighscoreObject);
+
+    myJSONhighscoreObject = localStorage.getItem('highScore2');
+    highScore2= JSON.parse(myJSONhighscoreObject);
+
+    myJSONhighscoreObject = localStorage.getItem('highScore3');
+    highScore3= JSON.parse(myJSONhighscoreObject);
+
+    if(newScore >highScore1.score){
+      highScore3.score = highScore2.score;
+      highScore3.name = highScore2.name;
+      highScore3.Date = highScore2.Date;
+
+      highScore2.score = highScore1.score;
+      highScore2.name = highScore1.name;
+      highScore2.Date = highScore1.Date;
+
+      highScore1.score = newScore;
+      highScore1.Date = date;
+      highScore1.name = userName;
+
+      myJSONhighscoreObject = JSON.stringify(highScore1);
+      localStorage.setItem('highScore1', myJSONhighscoreObject);
+
+      myJSONhighscoreObject = JSON.stringify(highScore2);
+      localStorage.setItem('highScore2', myJSONhighscoreObject);
+
+      myJSONhighscoreObject = JSON.stringify(highScore3);
+      localStorage.setItem('highScore3', myJSONhighscoreObject);
+      }
+    else if (newScore > highScore2.score){
+      highScore3.score = highScore2.score;
+      highScore3.name = highScore2.name;
+      highScore3.Date = highScore2.Date;
+
+      highScore2.score = newScore;
+      highScore2.Date = date;
+      highScore2.name = userName;
+
+      myJSONhighscoreObject = JSON.stringify(highScore3);
+      localStorage.setItem('highScore3', myJSONhighscoreObject);
+
+      myJSONhighscoreObject = JSON.stringify(highScore2);
+      localStorage.setItem('highScore2', myJSONhighscoreObject);
+    }
+    else if (newScore > highScore3.score){
+      highScore3.score = newScore;
+      highScore3.Date = date;
+      highScore3.name = userName;
+      myJSONhighscoreObject = JSON.stringify(highScore3);
+      localStorage.setItem('highScore3', myJSONhighscoreObject);
+    }
+    }
+  }
