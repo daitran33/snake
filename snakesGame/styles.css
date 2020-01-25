@@ -12,7 +12,11 @@
 #gameCanvas {
     	/*style the canvas*/
 	/*border: 1px solid #000000;*/
-    
+    background: -webkit-linear-gradient(white, #33ccff, green); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(white, #33ccff, green); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(white, #33ccff, green); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(white, #33ccff, green); /* Standard syntax */
+      
 	
 	background-position: center center;
 	background-size: contain;
@@ -22,10 +26,7 @@
     font-size: 100px;
     font-family: 'Antic Slab', serif;
   }
-#gameContainer {
-    
-    
-}
+
  .uname{
 padding: 10px 10px;
 /*    margin-right: 100px;*/
@@ -43,6 +44,7 @@ padding: 10px 10px;
     float: left;
     
 }
+/*
 #controller {
 		padding: 25px 10px;
 		  width:550px;
@@ -52,13 +54,23 @@ padding: 10px 10px;
 		  border-radius: 65px;
 		  border: 30px solid #cccccc;
 	  }
+*/
 	   button {
+           position: relative;
 		background-color: #808080;
 		color: white;
 		padding: 7px 10px;
 		border: none;
 		border-radius: 30px;
 		transition: 2s;
+           
+		width:20%;
+		text-align: center;
+		font-size: 18px;
+		padding:10px;
+		margin:1%;
+		border-radius: 10px;
+          float:left;
 	  }
 	  button:hover {
 		background-color: white;
@@ -67,23 +79,31 @@ padding: 10px 10px;
 #User {
 		color: black;
 	  }
-font-family: Arial;
-	  }
+
 	
-      Canvas {
-		background: -webkit-linear-gradient(white, #33ccff, green); /* For Safari 5.1 to 6.0 */
-		background: -o-linear-gradient(white, #33ccff, green); /* For Opera 11.1 to 12.0 */
-		background: -moz-linear-gradient(white, #33ccff, green); /* For Firefox 3.6 to 15 */
-		background: linear-gradient(white, #33ccff, green); /* Standard syntax */
-      }
+/*
+    
 	  .left-control {
 		text-align:center;
 		width:120px;
 		float: left;
-/*		display:inline-block;*/
+		display:inline-block;
 	  } 
 	 
-	  
+*/
+/*
+	  #start,#save, #resume, #leaderboard{
+		display:inline-block;
+		width:20%;
+		text-align: center;
+		font-size: 18px;
+		padding:10px;
+		margin:1%;
+		border-radius: 10px;
+          float:left;
+		
+	}	
+*/
 	  .title {
 		font-size: 2em;
 	  }
@@ -92,3 +112,21 @@ font-family: Arial;
 		text-align: center;
 		color: #737373;
 	  }
+@media only screen  and (min-width: 960px) {/*for screens at least 960, in other words large*/
+#gameContainer {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+}
+
+	#start,#save, #resume, #leaderboard{
+		display:inline-block;
+		width:20%;
+		text-align: center;
+		font-size: 18px;
+		padding:10px;
+		margin:1%;
+		border-radius: 10px;
+		
+	}	

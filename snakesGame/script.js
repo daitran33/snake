@@ -298,7 +298,7 @@ function displayHighscores(){
   function highscores(){
     var date = new Date();
     date = date.toUTCString();
-    //saveGame();
+    saveGame();
     if(!localStorage.highScore1){
     var highScore1 = {
     name : userName,
