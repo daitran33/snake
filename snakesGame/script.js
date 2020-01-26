@@ -89,6 +89,7 @@
 			ctx.fillText("As the snake finds food, it eats the food, and thereby grows larger.",15,210);
 			ctx.fillText("The game ends when the snake either moves off the screen or moves into itself.",15,240);
       ctx.fillText("The goal is to make the snake as large as possible before that happens.",15,270);
+               ctx.fillText("Makel sure to save your High Score.",15,300);
 		}
 
 /**
