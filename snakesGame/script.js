@@ -263,7 +263,7 @@
 function displayHighscores(){
       //used for JSON object returned from local storage
       var myJSONhighscoreObject;
-//highscores();
+highscores();
       //read in top scores values from local storage and parse them to ints
       myJSONhighscoreObject = localStorage.getItem('highScore3');
       highScore3 = JSON.parse(myJSONhighscoreObject);
@@ -278,6 +278,7 @@ function displayHighscores(){
       var context = canvas.getContext('2d');
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.font = "30px serif";
+   ctx.fillStyle = "black";
 
   context.fillText("User Name", 15, 65);
   context.fillText("Score", 255, 65);
