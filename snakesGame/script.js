@@ -278,7 +278,7 @@ highscores();
       var context = canvas.getContext('2d');
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.font = "30px serif";
-   ctx.fillStyle = "black";
+   context.fillStyle = "black";
 
   context.fillText("User Name", 15, 65);
   context.fillText("Score", 255, 65);
